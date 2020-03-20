@@ -1,0 +1,22 @@
+{
+  "name": "dokuinjs",
+  "version": "1.0.0",
+  "description": "The only documentation generator at ease!",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dokuin/dokuinjs.git"
+  },
+  "keywords": [
+    "documentation"
+  ],
+  "author": "DokuIn Developers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dokuin/dokuinjs/issues"
+  },
+  "homepage": "https://github.com/dokuin/dokuinjs#readme"
+}
