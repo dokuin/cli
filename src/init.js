@@ -10,19 +10,6 @@ export default () => {
     {
       name: 'author',
       question: 'Who is your author ? '
-    },
-    {
-      name: 'start',
-      question: 'Whats the start command ? '
-    }
-  ];
-
-  const endpointExample = [
-    {
-      url: 'http://localhost:3000',
-      method: 'get',
-      headers: {},
-      body: {}
     }
   ];
 
@@ -47,8 +34,8 @@ export default () => {
         if (index < totalQuestion) {
           cli.question();
         } else {
-          data['endpoints'] = endpointExample;
           fs.writeFileSync('dokuin.config.json', JSON.stringify(data, null, 2));
+          fs.writeFileSync('dokuin.enpoints.json', JSON.stringify([], null, 2));
           readline.close();
         }
       });
