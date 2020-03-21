@@ -3,6 +3,7 @@ const colors = require('colors');
 const chalk = require('chalk');
 const boxen = require('boxen');
 const readline = require('./readline');
+const ora = require('ora');
 
 export default () => {
   const questionArray = [
@@ -41,6 +42,8 @@ export default () => {
         } else {
           fs.writeFileSync('dokuin.config.json', JSON.stringify(data, null, 2));
           fs.writeFileSync('dokuin.endpoints.json', JSON.stringify([], null, 2));
+          const spinner = ora('Your configuration are still being created').start()
+          spinner.succeed('Your configuration have been created')
           readline.close();
         }
       });

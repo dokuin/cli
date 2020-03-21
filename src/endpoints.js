@@ -20,7 +20,7 @@ export default () => {
     },
     {
       name: 'headers',
-      question: 'Headers ? (yes or no) ',
+      question: 'Add Headers ? (yes or no) ',
       nestedQuestion: [
         {
           name: 'key',
@@ -38,7 +38,7 @@ export default () => {
     },
     {
       name: 'query',
-      question: 'Query Params ? (yes or no) ',
+      question: 'Add Query Params ? (yes or no) ',
       nestedQuestion: [
         {
           name: 'key',
@@ -56,7 +56,7 @@ export default () => {
     },
     {
       name: 'body',
-      question: 'Request Body ? (yes or no) ',
+      question: 'Add Request Body ? (yes or no) ',
       nestedQuestion: [
         {
           name: 'key',
@@ -92,7 +92,9 @@ export default () => {
         }else{
           if(questionArray[index].name !== 'next'){
             data[questionArray[index].name] = {}
-            if(value === 'yes'){
+            if(value === 'yes' || value === 'y'){
+              console.clear()
+              console.log(chalk.bold.cyan(`${questionArray[index].name} configuration:\n`))
               let totalNestedQuestion = 3
               let nestedIndex = 0
               let key = ''
@@ -110,7 +112,7 @@ export default () => {
                   if(nestedIndex < totalNestedQuestion){
                     endpoints.nestedQuestion()
                   }else{
-                    if(text == 'yes'){
+                    if(text == 'yes' || text === 'y'){
                       nestedData[key] = values
                       data[questionArray[index].name] = nestedData
                       nestedIndex = 0
@@ -135,21 +137,19 @@ export default () => {
         if(index < totalQuestion){
           endpoints.question()
         }else{
-          if(value === 'yes'){
+          if(value === 'yes' || value === 'y'){
             console.clear()
             listEndpoint.push(data)
             endpoints.init()
           }else{
             listEndpoint.push(data)
+            const spinner = ora('Your endpoints are still being created').start()
             fs.writeFile('dokuin.endpoints.json', JSON.stringify(listEndpoint, null, 2), (err, done) => {
               if(err){
                 console.log('error')
               }else{
-                const spinner = ora('Your endpoints are still being created').start()
-                setTimeout(() => {
-                  spinner.succeed('Your endpoints have been created')
-                  readline.close()
-                }, 2000);
+                spinner.succeed('Your endpoints have been created')
+                readline.close()
               }
             })
           }
