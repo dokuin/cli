@@ -1,14 +1,12 @@
 const json2md = require('json2md');
 const fs = require('fs');
+const spinner = require('ora')();
+
+const readline = require('./readline');
 
 export default () => {
-  // Production
   const configPath = `${process.cwd()}/dokuin.config.json`;
   const endpointsPath = `${process.cwd()}/dokuin.endpoints.json`;
-
-  // Development
-  // const configPath = `/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.config.json`;
-  // const endpointsPath = `/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.endpoints.json`;
 
   const config = JSON.parse(fs.readFileSync(configPath, { encoding: 'utf8' }));
   const endpoints = JSON.parse(
@@ -16,6 +14,8 @@ export default () => {
   );
 
   const dokuinData = { ...config, endpoints };
+
+  spinner.start(`Converting project ${dokuinData.name} endpoints into MD...\n`);
 
   const convertedEndpoints = endpoints.map(endpoint => {
     const { method, path, headers, body, response } = endpoint;
@@ -57,14 +57,9 @@ export default () => {
     ...convertedEndpoints
   ]);
 
-  // Production
   const docsPath = `${process.cwd()}/${dokuinData.name}.md`;
   fs.writeFileSync(docsPath, convertedData, { encoding: 'utf8' });
 
-  // Development
-  // fs.writeFileSync(
-  //   `/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/md-example.md`,
-  //   convertedData,
-  //   { encoding: 'utf8' }
-  // );
+  spinner.stop(`Successfully converted into MD!\n`);
+  readline.close();
 };
