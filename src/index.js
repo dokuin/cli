@@ -7,15 +7,16 @@ export default class Cli {
   static init() {
     return cliInit();
   }
-  
+
   static run() {
     return cliRun();
   }
 
   static convert() {
     return cliConvert();
-    
-  static cliGenerate(){
+  }
+
+  static cliGenerate() {
     return cliGenerate();
   }
 }
