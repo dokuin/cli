@@ -1,22 +1,22 @@
 const json2md = require('json2md');
 const fs = require('fs');
 
-// Production
-const configPath = `${process.cwd()}/dokuin.config.json`;
-const endpointsPath = `${process.cwd()}/dokuin.endpoints.json`;
-
-// Development
-// const configPath = `/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.config.json`;
-// const endpointsPath = `/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.endpoints.json`;
-
-const config = JSON.parse(fs.readFileSync(configPath, { encoding: 'utf8' }));
-const endpoints = JSON.parse(
-  fs.readFileSync(endpointsPath, { encoding: 'utf8' })
-);
-
-const dokuinData = { ...config, endpoints };
-
 export default () => {
+  // Production
+  const configPath = `${process.cwd()}/dokuin.config.json`;
+  const endpointsPath = `${process.cwd()}/dokuin.endpoints.json`;
+
+  // Development
+  // const configPath = `/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.config.json`;
+  // const endpointsPath = `/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.endpoints.json`;
+
+  const config = JSON.parse(fs.readFileSync(configPath, { encoding: 'utf8' }));
+  const endpoints = JSON.parse(
+    fs.readFileSync(endpointsPath, { encoding: 'utf8' })
+  );
+
+  const dokuinData = { ...config, endpoints };
+
   const convertedEndpoints = endpoints.map(endpoint => {
     const { method, path, headers, body, response } = endpoint;
 

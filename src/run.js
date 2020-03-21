@@ -2,27 +2,30 @@ const fs = require('fs');
 const axios = require('axios').default;
 const build = require('build-url');
 
-// Production
-const configPath = `${process.cwd()}/dokuin.config.json`;
-const endpointsPath = `${process.cwd()}/dokuin.endpoints.json`;
-
-// Development
-// const configPath =
-//   '/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.config.json';
-// const endpointsPath =
-//   '/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.endpoints.json';
-
-const { baseURL } = JSON.parse(
-  fs.readFileSync(configPath, { encoding: 'utf8' })
-);
-
-const endpoints = JSON.parse(
-  fs.readFileSync(endpointsPath, {
-    encoding: 'utf8'
-  })
-);
-
 export default () => {
+  // Production
+  const configPath = `${process.cwd()}/dokuin.config.json`;
+  const endpointsPath = `${process.cwd()}/dokuin.endpoints.json`;
+
+  fs.accessSync(configPath, fs.constants.R_OK);
+  fs.accessSync(endpointsPath, fs.constants.R_OK);
+
+  // Development
+  // const configPath =
+  //   '/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.config.json';
+  // const endpointsPath =
+  //   '/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.endpoints.json';
+
+  const { baseURL } = JSON.parse(
+    fs.readFileSync(configPath, { encoding: 'utf8' })
+  );
+
+  const endpoints = JSON.parse(
+    fs.readFileSync(endpointsPath, {
+      encoding: 'utf8'
+    })
+  );
+
   for (const endpoint of endpoints) {
     const builtURL = build(baseURL, {
       path: typeof endpoint.path !== 'undefined' ? endpoint.path : baseURL,
