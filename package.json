@@ -24,7 +24,10 @@
   },
   "homepage": "https://github.com/dokuin/dokuinjs#readme",
   "dependencies": {
+    "axios": "^0.19.2",
+    "build-url": "^2.0.0",
     "colors": "^1.4.0",
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "json2md": "^1.7.0"
   }
 }

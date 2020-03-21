@@ -7,6 +7,12 @@ switch (mainCommand) {
     cli.init();
     break;
 
+  case 'run':
+    cli.run();
+
+  case 'convert':
+    cli.convert();
+
   default:
     // eksekusi endpoints
     break;
