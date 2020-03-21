@@ -1,6 +1,6 @@
 {
   "name": "dokuinjs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The only documentation generator at ease!",
   "main": "index.js",
   "scripts": {
