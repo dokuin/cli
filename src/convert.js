@@ -61,5 +61,6 @@ export default () => {
   fs.writeFileSync(docsPath, convertedData, { encoding: 'utf8' });
 
   spinner.succeed(`Successfully converted into MD!\n`);
+
   readline.close();
 };
