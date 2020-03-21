@@ -1,4 +1,6 @@
 {
-  "projectName": "Dokuin",
-  "author": "Dokuin"
+  "name": "DokuIn",
+  "description": "Fuck the fuck",
+  "baseURL": "http://localhost:3000",
+  "author": "DokuIn"
 }

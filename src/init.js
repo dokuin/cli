@@ -6,13 +6,21 @@ const readline = require('./readline');
 export default () => {
   const questionArray = [
     {
-      name: 'projectName',
-      question: 'What is your project name ? '
+      name: 'name',
+      question: 'Project Name: '
+    },
+    {
+      name: 'description',
+      question: 'Project Description: '
+    },
+    {
+      name: 'baseURL',
+      question: 'Project Base URL: '
     },
     {
       name: 'author',
-      question: 'Who is your author ? '
-    }
+      question: 'Project Author: '
+    },
   ];
 
   let cli = {};

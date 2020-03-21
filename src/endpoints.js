@@ -15,8 +15,8 @@ export default () => {
       question: 'HTTP Method: '
     },
     {
-      name: 'url',
-      question: 'Url: '
+      name: 'path',
+      question: 'Path: '
     },
     {
       name: 'headers',
@@ -37,26 +37,8 @@ export default () => {
       ]
     },
     {
-      name: 'params',
-      question: 'Params ? (yes or no) ',
-      nestedQuestion: [
-        {
-          name: 'key',
-          question: 'Key: ',
-        },
-        {
-          name: 'value',
-          question: 'Value: ',
-        },
-        {
-          name: 'next',
-          question: 'Add more params ? (yes or no) '
-        }
-      ]
-    },
-    {
       name: 'query',
-      question: 'Query ? (yes or no) ',
+      question: 'Query Params ? (yes or no) ',
       nestedQuestion: [
         {
           name: 'key',
@@ -68,7 +50,7 @@ export default () => {
         },
         {
           name: 'next',
-          question: 'Add more query ? (yes or no) '
+          question: 'Add more query params ? (yes or no) '
         }
       ]
     },
@@ -104,7 +86,7 @@ export default () => {
     endpoints.question = () => {
       readline.question(questionArray[index].question, (value) => {
         
-        if(questionArray[index].name === 'method' || questionArray[index].name === 'url'){
+        if(questionArray[index].name === 'method' || questionArray[index].name === 'url' || questionArray[index].name === 'path'){
           data[questionArray[index].name] = value
           index++
         }else{
