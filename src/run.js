@@ -1,20 +1,16 @@
 const fs = require('fs');
 const axios = require('axios').default;
 const build = require('build-url');
+const spinner = require('ora')();
 
-export default () => {
-  // Production
+const readline = require('./readline');
+
+export default async () => {
   const configPath = `${process.cwd()}/dokuin.config.json`;
   const endpointsPath = `${process.cwd()}/dokuin.endpoints.json`;
 
   fs.accessSync(configPath, fs.constants.R_OK);
   fs.accessSync(endpointsPath, fs.constants.R_OK);
-
-  // Development
-  // const configPath =
-  //   '/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.config.json';
-  // const endpointsPath =
-  //   '/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.endpoints.json';
 
   const { baseURL } = JSON.parse(
     fs.readFileSync(configPath, { encoding: 'utf8' })
@@ -32,7 +28,9 @@ export default () => {
       queryParams: typeof endpoint.query !== 'undefined' ? endpoint.query : {}
     });
 
-    console.log(builtURL);
+    spinner.start(
+      `Processing ${endpoint.method.toUpperCase()} from ${builtURL}...\n`
+    );
 
     shootApi(builtURL, endpoint)
       .then(response => {
@@ -47,6 +45,10 @@ export default () => {
         fs.writeFileSync(endpointsPath, JSON.stringify(endpoints, null, 2), {
           encoding: 'utf8'
         });
+
+        spinner.succeed(
+          `Got response with code ${status}: ${statusText} from ${builtURL}\n`
+        );
       })
       .catch(err => {
         const { status, statusText, headers, data } = err.response;
@@ -60,8 +62,18 @@ export default () => {
         fs.writeFileSync(endpointsPath, JSON.stringify(endpoints, null, 2), {
           encoding: 'utf8'
         });
+
+        spinner.fail(
+          `Got error with code ${status}: ${statusText} from ${builtURL}\n`
+        );
       });
   }
+
+  fs.writeFileSync(endpointsPath, JSON.stringify(endpoints, null, 2), {
+    encoding: 'utf8'
+  });
+
+  readline.close();
 };
 
 async function shootApi(url, config) {
