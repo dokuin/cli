@@ -1,6 +1,5 @@
 const json2md = require('json2md');
 const fs = require('fs');
-const path = require('path');
 
 // Production
 const configPath = `${process.cwd()}/dokuin.config.json`;
@@ -59,7 +58,7 @@ export default () => {
   ]);
 
   // Production
-  const docsPath = path.join(__dirname, '../md-example.md');
+  const docsPath = `${process.cwd()}/${dokuinData.name}.md`;
   fs.writeFileSync(docsPath, convertedData, { encoding: 'utf8' });
 
   // Development
