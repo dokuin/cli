@@ -18,8 +18,4 @@ switch (mainCommand) {
   case 'create':
     cli.create();
     break;
-
-  default:
-    // eksekusi endpoints
-    break;
 }
