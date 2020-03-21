@@ -60,6 +60,6 @@ export default () => {
   const docsPath = `${process.cwd()}/${dokuinData.name}.md`;
   fs.writeFileSync(docsPath, convertedData, { encoding: 'utf8' });
 
-  spinner.stop(`Successfully converted into MD!\n`);
+  spinner.succeed(`Successfully converted into MD!\n`);
   readline.close();
 };
