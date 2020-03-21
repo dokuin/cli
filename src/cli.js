@@ -7,6 +7,10 @@ switch (mainCommand) {
     cli.init();
     break;
 
+   case 'create':
+    cli.cliGenerate();
+    break;
+    
   default:
     // eksekusi endpoints
     break;
