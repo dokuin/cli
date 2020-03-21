@@ -15,12 +15,12 @@ npm install dokuinjs
 ```
 
 ## Usage
-* ### you should run dokuinjs in your terminal with command
+* ### you should run dokuinjs in your terminal with command ###
 ```shell
 dokuin init
 ```
 
-* ### input about your project
+* ### input about your project ###
 
 ```shell
 Projct's name :
@@ -32,13 +32,13 @@ Base URL :
 Author's name :
 ```
 
-* ### run dokuinjs with command
+* ### run dokuinjs with command ###
 ```shell
 dokuin create
 ```
 
 * ### input your endpoints
-##### you can put your endpoints as many as you want
+##### you can put your endpoints as many as you want ###
 ```shell
 HTTP method:
 
@@ -50,12 +50,12 @@ Body (yes/no) :
 ```
 
 
-* ### now run dokuinjs to get all responses from your endpoints
+* ### now run dokuinjs to get all responses from your endpoints ###
 ```shell
 dokuin run
 ```
 
-* ### and finally convert your responses to md file
+* ### and finally convert your responses to md file ###
 ```shell
 dokuin convert
 ```
@@ -64,7 +64,7 @@ voila your documentation is ready !
 
 
 ## Example
-* ### Instal and make config file from dokuinjs
+* ### Instal and make config file from dokuinjs ###
 ```shell
 npm i dokuinjs
 
@@ -73,7 +73,7 @@ What's your project's name ? Entertainme
 What's the author's name ? Meggy
 ```
 
-* ### input your endpoints with command
+* ### input your endpoints with command ###
 
 #### 1. Example
 ```shell 
@@ -132,12 +132,12 @@ add more Query (yes/no) : no
 Add more endpoints (yes/no) : no
 
 ```
-* ### with this command dokuinjs will run all your endpoints 
+* ### with this command dokuinjs will run all your endpoints ###
 ```shell
 dokuin run
 ``` 
 
-* ### and now you can get your md documentation from your respose 
+* ### and now you can get your md documentation from your respose ###
 ```shell
 dokuin convert
 ```
