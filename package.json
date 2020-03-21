@@ -6,17 +6,29 @@
   "scripts": {
     "test": "jest"
   },
+  "bin": {
+    "dokuin": "bin/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dokuin/dokuinjs.git"
   },
   "keywords": [
-    "documentation"
+    "documentation",
+    "cli"
   ],
   "author": "DokuIn Developers",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dokuin/dokuinjs/issues"
   },
-  "homepage": "https://github.com/dokuin/dokuinjs#readme"
+  "homepage": "https://github.com/dokuin/dokuinjs#readme",
+  "dependencies": {
+    "boxen": "^4.2.0",
+    "chalk": "^3.0.0",
+    "colors": "^1.4.0",
+    "esm": "^3.2.25",
+    "figlet": "^1.3.0",
+    "ora": "^4.0.3"
+  }
 }
