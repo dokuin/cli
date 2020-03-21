@@ -1,0 +1,11 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/products/1",
+    "headers": {
+      "token": "ndsaidfsaidjiadsa"
+    },
+    "query": {},
+    "body": {}
+  }
+]

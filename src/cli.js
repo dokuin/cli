@@ -12,7 +12,11 @@ switch (mainCommand) {
 
   case 'convert':
     cli.convert();
-
+    
+   case 'create':
+    cli.cliGenerate();
+    break;
+    
   default:
     // eksekusi endpoints
     break;

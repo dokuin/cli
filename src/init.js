@@ -1,27 +1,32 @@
 const fs = require('fs');
 const colors = require('colors');
+const chalk = require('chalk');
+const boxen = require('boxen');
+const readline = require('./readline');
 
 export default () => {
   const questionArray = [
     {
-      name: 'projectName',
-      question: 'What is your project name ? '
+      name: 'name',
+      question: 'Project Name: '
+    },
+    {
+      name: 'description',
+      question: 'Project Description: '
+    },
+    {
+      name: 'baseURL',
+      question: 'Project Base URL: '
     },
     {
       name: 'author',
-      question: 'Who is your author ? '
-    }
+      question: 'Project Author: '
+    },
   ];
 
   let cli = {};
-
-  console.log(colors.green('⚙️ Dokuin configuration : '));
-
-  const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    prompt: '>'
-  });
+  
+  console.log(chalk.bold.cyan(boxen(`⚙️ Welcome to dokuin, There is no easier way to create open source RESTful Api documentation website : `, { padding: 1 })));
 
   cli.init = () => {
     let totalQuestion = questionArray.length;
@@ -35,7 +40,7 @@ export default () => {
           cli.question();
         } else {
           fs.writeFileSync('dokuin.config.json', JSON.stringify(data, null, 2));
-          fs.writeFileSync('dokuin.enpoints.json', JSON.stringify([], null, 2));
+          fs.writeFileSync('dokuin.endpoints.json', JSON.stringify([], null, 2));
           readline.close();
         }
       });
