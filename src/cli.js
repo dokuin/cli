@@ -9,9 +9,11 @@ switch (mainCommand) {
 
   case 'run':
     cli.run();
+    break;
 
   case 'convert':
     cli.convert();
+    break;
 
   case 'create':
     cli.create();
