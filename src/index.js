@@ -16,7 +16,7 @@ export default class Cli {
     return cliConvert();
   }
 
-  static cliGenerate() {
+  static create() {
     return cliGenerate();
   }
 }
