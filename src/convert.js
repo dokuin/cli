@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Production
-const configPath = path.join(__dirname, '../dokuin.config.json');
-const endpointsPath = path.join(__dirname, '../dokuin.endpoints.json');
+const configPath = `${process.cwd()}/dokuin.config.json`;
+const endpointsPath = `${process.cwd()}/dokuin.endpoints.json`;
 
 // Development
 // const configPath = `/home/adamrafiandri/Desktop/hacktiv8/phase-3/dokuinjs/dokuin.config.json`;

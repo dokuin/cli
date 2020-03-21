@@ -1,13 +1,10 @@
 const fs = require('fs');
-const path = require('path');
 const axios = require('axios').default;
 const build = require('build-url');
 
 // Production
-const configPath = path.join(__dirname, '../dokuin.config.json');
-const endpointsPath = path.join(__dirname, '../dokuin.endpoints.json');
-
-// console.log('====================', path.join('dokuin.config.json'));
+const configPath = `${process.cwd()}/dokuin.config.json`;
+const endpointsPath = `${process.cwd()}/dokuin.endpoints.json`;
 
 // Development
 // const configPath =
