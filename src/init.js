@@ -1,4 +1,5 @@
 const fs = require('fs');
+const colors = require('colors');
 const chalk = require('chalk');
 const boxen = require('boxen');
 const readline = require('./readline');
@@ -24,7 +25,7 @@ export default () => {
   ];
 
   let cli = {};
-
+  
   console.log(chalk.bold.cyan(boxen(`⚙️ Welcome to dokuin, There is no easier way to create open source RESTful Api documentation website : `, { padding: 1 })));
 
   cli.init = () => {
