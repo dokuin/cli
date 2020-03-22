@@ -16,7 +16,7 @@ export default () => {
   );
 
   const noResponseEndpoints = endpoints.filter(endpoint => {
-    return !endpoint.response || endpoint.errorResponse.length <= 0;
+    return !endpoint.response && endpoint.errorResponse.length <= 0;
   });
 
   if (noResponseEndpoints.length > 0) {
@@ -90,7 +90,7 @@ export default () => {
     const docsPath = `${process.cwd()}/${dokuinData.name}.md`;
     fs.writeFileSync(docsPath, convertedData, { encoding: 'utf8' });
 
-    spinner.succeed(`Successfully converted into MD!\n`);
+    spinner.succeed(`Successfully converted to MD!\n`);
 
     readline.close();
   }
