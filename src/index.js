@@ -1,22 +1,29 @@
-import cliInit from './init';
-import cliRun from './run';
-import cliConvert from './convert';
-import cliGenerate from './endpoints';
+// COMMANDS
+import init from './init';
+import run from './run';
+import convert from './convert';
+import create from './endpoints';
 
-export default class Cli {
-  static init() {
-    return cliInit();
-  }
+// LOCALS
+import { checkEligible } from '../helpers';
+import readline from './readline';
 
-  static run() {
-    return cliRun();
-  }
+const mainCommand = process.argv[2];
 
-  static convert() {
-    return cliConvert();
-  }
+switch (mainCommand) {
+  case 'init':
+    init();
+    break;
 
-  static create() {
-    return cliGenerate();
-  }
+  case 'run':
+    checkEligible() ? run() : readline.close();
+    break;
+
+  case 'convert':
+    checkEligible() ? convert() : readline.close();
+    break;
+
+  case 'create':
+    create();
+    break;
 }
