@@ -21,7 +21,7 @@ export default () => {
     const { method, path, headers, body, response } = endpoint;
 
     const result = [
-      { h2: `**${method}** ${path}` },
+      { h2: `**${method.toUpperCase()}** ${path}` },
       { h3: 'Request' },
       {
         code: {
@@ -54,7 +54,15 @@ export default () => {
     { h1: dokuinData.name },
     { blockquote: `by ${dokuinData.author}` },
     { h3: `Base URL ===> ${config.baseURL}` },
-    ...convertedEndpoints
+    ...convertedEndpoints,
+    {
+      h5: {
+        link: {
+          title: 'Powered by DokuIn',
+          source: 'https://www.npmjs.com/package/dokuinjs'
+        }
+      }
+    }
   ]);
 
   const docsPath = `${process.cwd()}/${dokuinData.name}.md`;
