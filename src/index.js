@@ -1,11 +1,16 @@
+// NPM MODULES
 import fs from 'fs';
 import chalk from 'chalk';
+
+// COMMAND FUNCTIONS
 import cliStart from './start';
 import cliInit from './init';
 import cliRun from './run';
 import cliConvert from './convert';
 import cliGenerate from './endpoints';
 import { DeleteEndpoint } from './mutation';
+import { checkEligible } from '../helpers';
+import readline from './readline';
 
 export default class Cli {
   static start(){
@@ -16,16 +21,16 @@ export default class Cli {
     return cliInit();
   }
 
+  static create() {
+    return cliGenerate();
+  }
+
   static run() {
-    return cliRun();
+    return checkEligible() ? cliRun() : readline.close();
   }
 
   static convert() {
-    return cliConvert();
-  }
-
-  static create() {
-    return cliGenerate();
+    return checkEligible() ? cliConvert() : readline.close();
   }
 
   static add() {
@@ -66,6 +71,4 @@ export default class Cli {
   static delete(){
     return DeleteEndpoint()
   }
-
-
 }
