@@ -33,8 +33,14 @@ export default class Cli {
   }
 
   static rawList(){
-    const list = fs.readFileSync(`${process.cwd()}/dokuin.endpoints.json`, 'utf-8')
-    return JSON.parse(list)
+    if(fs.existsSync(`${process.cwd()}/dokuin.endpoints.json`)){
+      const list = fs.readFileSync(`${process.cwd()}/dokuin.endpoints.json`, 'utf-8')
+      return JSON.parse(list)
+    }else{
+      console.clear()
+      console.log(chalk.red(`\nPlease make the configuration first: \n`))
+      Cli.init()
+    }
   }
 
   static list(autoclose = true){

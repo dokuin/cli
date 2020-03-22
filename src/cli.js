@@ -37,11 +37,12 @@ export default class CliCommand {
         break;
     
       default:
+        cli.start()
         break;
     }
   }
 }
 
-if(process.argv[2]){
+if(process.argv){
   CliCommand.command(process.argv[2])
 }
