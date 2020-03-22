@@ -18,10 +18,11 @@ export default () => {
   spinner.start(`Converting project ${dokuinData.name} endpoints into MD...\n`);
 
   const convertedEndpoints = endpoints.map(endpoint => {
-    const { method, path, headers, body, response } = endpoint;
+    const { method, path, description, headers, body, response } = endpoint;
 
     const result = [
       { h2: `**${method.toUpperCase()}** ${path}` },
+      { p: description },
       { h3: 'Request' },
       {
         code: {
@@ -52,8 +53,10 @@ export default () => {
 
   const convertedData = json2md([
     { h1: dokuinData.name },
+    { p: dokuinData.description },
     { blockquote: `by ${dokuinData.author}` },
-    { h3: `Base URL ===> ${config.baseURL}` },
+    { h4: `Base URL` },
+    {p: config.baseURL },
     ...convertedEndpoints,
     {
       h5: {
