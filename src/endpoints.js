@@ -1,3 +1,4 @@
+import cli from './index';
 const fs = require('fs');
 const endpoints = {}
 const readline = require('./readline');
@@ -6,9 +7,12 @@ const boxen = require('boxen')
 const warning = chalk.keyword('orange')
 const ora = require('ora');
 
-export default () => {
+export default (add = false) => {
+  const message = add ? 'Fill these to add new endpoint' : 'Fill these to create endpoints'
   console.log(chalk.bold.cyan(boxen('Dokuin endpoints configuration: ', { padding: 1 })))
-  console.log(warning('Fill these to create endpoints \n'))
+  
+  console.log(warning(message + '\n'))
+
   const questionArray = [
     {
       name: 'method',
@@ -17,6 +21,10 @@ export default () => {
     {
       name: 'path',
       question: 'Path: '
+    },
+    {
+      name: 'description',
+      question: 'Endpoint description: '
     },
     {
       name: 'headers',
@@ -78,15 +86,18 @@ export default () => {
     }
   ]
   
-  const listEndpoint = []
+  const listEndpoint = cli.rawList()
   endpoints.init = () => {
     let totalQuestion = questionArray.length
     let index = 0
     const data = {}
     endpoints.question = () => {
       readline.question(questionArray[index].question, (value) => {
-        
-        if(questionArray[index].name === 'method' || questionArray[index].name === 'url' || questionArray[index].name === 'path'){
+        data.id = listEndpoint.length + 1
+        if(questionArray[index].name === 'method' 
+          || questionArray[index].name === 'url' 
+          || questionArray[index].name === 'path'
+          || questionArray[index].name === 'description'){
           data[questionArray[index].name] = value
           index++
         }else{

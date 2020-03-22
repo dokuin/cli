@@ -1,21 +1,47 @@
 import cli from './';
 
-const mainCommand = process.argv[2];
+export default class CliCommand {
+  static command(command = false){
 
-switch (mainCommand) {
-  case 'init':
-    cli.init();
-    break;
+    switch (command) {
+      case 'start':
+        cli.start();
+        break;
 
-  case 'run':
-    cli.run();
-    break;
+      case 'init':
+        cli.init();
+        break;
+    
+      case 'run':
+        cli.run();
+        break;
+    
+      case 'convert':
+        cli.convert();
+        break;
+    
+      case 'create':
+        cli.create();
+        break;
 
-  case 'convert':
-    cli.convert();
-    break;
+      case 'list':
+        cli.list();
+        break;
 
-  case 'create':
-    cli.create();
-    break;
+      case 'delete':
+        cli.delete();
+        break;
+        
+      case 'add':
+        cli.add();
+        break;
+    
+      default:
+        break;
+    }
+  }
+}
+
+if(process.argv[2]){
+  CliCommand.command(process.argv[2])
 }
