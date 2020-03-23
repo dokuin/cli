@@ -19,15 +19,15 @@ export default () => {
     },
     {
       key: 'create',
-      question: "Create new endpoints list"
+      question: "Create new endpoint list"
     },
     {
       key: 'run',
-      question: "Run endpoints"
+      question: "Run endpoint list"
     },
     {
       key: 'convert',
-      question: "Generate markdown"
+      question: "Generate Markdown"
     },
     {
       key: 'list',
@@ -35,11 +35,11 @@ export default () => {
     },
     {
       key: 'add',
-      question: "Add new endpoint into existing endpoints"
+      question: "Add new endpoint into existing endpoint list"
     },
     {
       key: 'delete',
-      question: "Delete endpoint in existing endpoints"
+      question: "Delete endpoint in existing endpoint list"
     }
   ]
 
