@@ -28,7 +28,7 @@ Project Description :
 Project Base URL :
 Author :
 ```
- ### Run this command to show DokuIn.js menu list ###
+ ### Run this command to show DokuIn.js menu list
 ```shell
 $ dokuin start
 
