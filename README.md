@@ -1,156 +1,324 @@
-# dokuinjs
+![logo](./assets/images/dokuinlogo.png)
+# DokuIn.js
+### Lets you make documentation for your REST API easier.  New to DokuIn.js ? Take a look at the Tutorial and Guide
 
-### It lets you make documentation for your Program easier. New to dokuInjs ? Take a look Tutorial and Guide
 
-## Table of Content
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Example](#example)
 
-- Installation
-- Usage
-- Example
-
-## Instalation
-
-Make sure you have npm installed. Then install dokuinjs to be used in your project with command
-
+## Installation
+Make sure you have Node.js and NPM installed. Then you can install DokuIn.js in your machine globally with command
 ```shell
-npm install dokuinjs
+$ npm install -g dokuinjs
 ```
 
 ## Usage
-
-* ### you should run dokuinjs in your terminal with command ###
-
+### Run DokuIn.js in your terminal with command ###
 ```shell
-dokuin init
+$ dokuin init
 ```
 
-* ### input about your project ###
+### Provide your project details ###
+```shell
+Project Name :
+Project Description :
+Project Base URL :
+Author :
+```
+ ### Run this command to show DokuIn.js menu list ###
+```shell
+$ dokuin start
+
+Please choose 1 command :
+
+[x]  Create new configuration
+[ ]  Create new endpoint list
+[ ]  Run endpoint list
+[ ]  Generate Markdown
+[ ]  Show endpoint list
+[ ]  Add new endpoint into endpoint list
+[ ]  Update an endpoint on the list 
+[ ]  Delete endpoint in existing endpoint list
+
+```
+### Choose second option to create new endpoints ###
+You can put your endpoints as many as you want.
 
 ```shell
-Projct's name :
-
-Project's Description :
-
-Base URL :
-
-Author's name :
+[x]  Create new endpoint list
 ```
 
-* ### run dokuinjs with command ###
-
+### This option will show endpoint list
 ```shell
-dokuin create
+[x]  Show endpoint list
 ```
 
-* ### input your endpoints
-
-##### you can put your endpoints as many as you want ###
-
+### Choose this one to get all responses from endpoint list ###
 ```shell
-HTTP method:
-
-Headers (yes/no) :
-
-QueryParams (yes/no) :
-
-Body (yes/no) :
+[x]  Run endpoint list
 ```
 
-* ### now run dokuinjs to get all responses from your endpoints ###
-
+### And finally convert responses to Markdown file with this option ###
 ```shell
-dokuin run
+[x]  Generate Markdown
 ```
 
-* ### and finally convert your responses to md file ###
+Voila your documentation is ready!
 
-```shell
-dokuin convert
-```
-
-voila your documentation is ready !
 
 ## Example
-
-* ### Instal and make config file from dokuinjs ###
-
+### Install and make config file with DokuIn.js ###
 ```shell
-npm i dokuinjs
+$ npm i -g  dokuinjs
 
-What's your project's name ? Entertainme
+$ dokuin init
 
-What's the author's name ? Meggy
+Project Name : netflux
+Project Description : it is practice project restful api
+Project Base URL : http://localhost:3000
+Author : meggy
 ```
 
-* ### input your endpoints with command ###
+### Create endpoint list  ###
 
 #### 1. Example
-
 ```shell
-dokuin create
+$ dokuin start  
 
-your endpoints
+Please choose 1 command :
 
-HTTP method : get
-Path:
+[ ]  Create new configuration
+[x]  Create new endpoint list
+[ ]  Run endpoint list
+[ ]  Generate Markdown
+[ ]  Show endpoint list
+[ ]  Add new endpoint into endpoint list
+[ ]  Update an endpoint on the list 
+[ ]  Delete endpoint in existing endpoint list
 
-Headers (yes/no) : yes
-key: token
-value :    dok23uin42js52ist52di32e78be67ste
-Add more Headers (yes/no) : no
+HTTP Method : get
+Path: /products
+Endpoint description : get all products
 
-QueryParams (yes/no) : yes
-key : id
-value : w8974e89is0oo
-add more params (yes/no) : no
+Add Headers ? (yes / no) yes
+Key: token
+Value: dok23uin42js52ist52di32e78be67ste
+Add more headers ? (yes / no) no
 
-Add more endpoints (yes/no) : no
+Add Query Params ? (yes / no) yes
+Key: id
+Value: w8974e89is0oo
+Add more query params ? (yes / no) no 
+
+Add Request Body ? (yes / no) no
+Add more endpoints ? (yes / no) no
 
 ```
 
 #### 2. Example
 
 ```shell
-dokuinjs create
+$ dokuin start
 
-your endpoints
+Please choose 1 command :
 
-HTTP method : put
+[ ]  Create new configuration
+[x]  Create new endpoint list
+[ ]  Run endpoint list
+[ ]  Generate Markdown
+[ ]  Show endpoint list
+[ ]  Add new endpoint into endpoint list
+[ ]  Update an endpoint on the list 
+[ ]  Delete endpoint in existing endpoint list
+
+HTTP method: put
+Path: /movies
+Endpoint description: update one movie
+
+Add Headers ? (yes / no): yes
+Key: token
+Value: dok23uin42js52ist52di32e78be67ste
+Add more headers ? (yes / no) no
+
+Add Query Params ? (yes / no) yes
+Key: movieId
+Value: w8974e89is0oo
+Add more query params ? (yes / no) no
+
+Add Request Body ? (yes / no) yes
+Key: title
+Value: dark
+Key: genre
+Value: adventure
+Add more request body ? (yes / no) yes
+Key: popularity
+Value: 34.912
+Add more request body ? (yes / no) no
+
+Add more endpoints ? (yes / no) : no
+
+```
+
+### Show endpoint list ###
+```shell
+$ dokuin start  
+
+Please choose 1 command :
+
+[ ]  Create new configuration
+..
+..
+[x]  Show endpoint list
+.. 
+..
+..
+
+----------------------------------------------------------------------------
+|(index)| id  |  Method  |          Path               |    Description    |
+|   1   |  1  |   GET    | http://localhost:3000       | Get all movies    |
+|   2   |  2  |   POST   | http://localhost:3000/login | login             |
+----------------------------------------------------------------------------
+
+```
+
+
+### Delete an endpoint  ###
+```shell
+$ dokuin start  
+
+Please choose 1 command :
+
+[ ]  Create new configuration
+..
+..
+..
+..
+..
+..
+[x]  Delete endpoint in existing endpoint list
+
+----------------------------------------------------------------------------
+|(index)| id  |  Method  |          Path               |    Description    |
+|   1   |  1  |   GET    | http://localhost:3000       | Get all movies    |
+|   2   |  2  |   POST   | http://localhost:3000/login | login             |
+----------------------------------------------------------------------------
+Endpoint ID : 1 
+
+```
+
+### Add new endpoints to the list ###
+```shell
+$ dokuin start  
+
+Please choose 1 command :
+
+[ ]  Create new configuration
+..
+..
+..
+[x]  Add new endpoints into endpoint list
+.. 
+..
+
+HTTP Method : post
 Path: movies/
 
-Headers (yes/no) : yes
-key: token
-value :    dok23uin42js52ist52di32e78be67ste
-Add more Headers (yes/no) : no
+Add Headers ? (yes / no) no
+Add Query Params ? (yes / no) no
+Add Request Body ? (yes / no) yes
 
-QueryParams (yes/no) : yes
-key : movieId
-value : w8974e89is0oo
-add more params (yes/no) : no
+Key: email
+Value: test@dokuinjs.com
+Add more Request Body ? (yes / no) yes
+Key: password
+Value: 12opw9d9s
+Add more request body ? (yes / no) no
 
-Body (yes/no) : yes
-key : title
-value :  dark
-add more Query (yes/no) : yes
-key : genre
-value :  adventure
-add more Query (yes/no) : yes
-key : popularity
-value :  34.912
-add more Query (yes/no) : no
-
-Add more endpoints (yes/no) : no
+Add more endpoints ? (yes / no) no
 
 ```
-
-* ### with this command dokuinjs will run all your endpoints ###
+### Update an endpoint on the list ###
 
 ```shell
-dokuin run
+$ dokuin start  
+
+Please choose 1 command :
+
+[ ]  Create new configuration
+..
+..
+..
+..
+..
+[x]  Update an endpoint on the list 
+..
+
+Which endpoint 
+[x] GET, http://localhost:3000
+[ ] POST, http://localhost:3000/login
+
+[ ] method
+[ ] description
+[ ] path
+[ ] query 
+[x] body
+
+Current Value
+key: username, value: caeasaradam
+value: <updated value> 
+More update ? (yes / no) yes 
+
+[x] GET, http://localhost:3000
+[ ] POST, http://localhost:3000/login
+
+Which key 
+[x] method
+[ ] description
+[ ] path
+[ ] query 
+[ ] body
+
+Current Value: GET
+HTTP Method:  <updated method> 
+More Update ? (yes / no) no
+
 ```
 
-* ### and now you can get your md documentation from your respose ###
-
+### Run endpoint list ###
 ```shell
-dokuin convert
+$ dokuin start  
+
+Please choose 1 command :
+
+[ ]  Create new configuration
+..
+[x]  Run endpoints
+..
+..
+..
+.. 
+..
+
 ```
+
+
+### Convert responses ###
+```shell
+$ dokuin start  
+
+Please choose 1 command :
+
+[ ]  Create new configuration
+..
+..
+[x]  Generate Markdown
+..
+..
+.. 
+..
+
+```
+
+
