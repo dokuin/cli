@@ -1,5 +1,6 @@
 ![logo](./assets/images/dokuinlogo.png)
 # DokuIn.js
+[![npm version](https://img.shields.io/npm/v/dokuinjs.svg?style=flat-square)](https://www.npmjs.com/package/dokuinjs) [![install size](https://packagephobia.now.sh/badge?p=dokuinjs@1.2.0)](https://packagephobia.now.sh/result?p=dokuinjs@1.2.0) [![npm downloads](https://img.shields.io/npm/dm/dokuinjs.svg?style=flat-square)](https://npm-stat.com/charts.html?package=dokuinjs)
 ### Lets you make documentation for your REST API easier.  New to DokuIn.js ? Take a look at the Tutorial and Guide
 
 
