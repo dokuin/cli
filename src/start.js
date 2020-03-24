@@ -1,47 +1,21 @@
 import CliCommand from './cli';
+import Cli from './';
 
 const readline = require('./readline')
-const charm = require('charm')(process.stdout)
+const charm = require('charm')()
+charm.pipe(process.stdout);
+charm.reset();
 const chalk = require('chalk');
 const boxen = require('boxen');
 const warning = chalk.keyword('orange');
+const { commandList } = require('./endpointQuestion');
 
-export default () => {
-
+export const start = () => {
   console.log(chalk.bold.cyan(boxen('Dokuin command list: ', { padding: 1 })))
   console.log(warning('Please choose 1 command : \n'))
 
   let selected = 0
-  let questionArray = [
-    {
-      key: 'init',
-      question: "Create new configuration"
-    },
-    {
-      key: 'create',
-      question: "Create new endpoint list"
-    },
-    {
-      key: 'run',
-      question: "Run endpoint list"
-    },
-    {
-      key: 'convert',
-      question: "Generate Markdown"
-    },
-    {
-      key: 'list',
-      question: "Your endpoint list"
-    },
-    {
-      key: 'add',
-      question: "Add new endpoint into existing endpoint list"
-    },
-    {
-      key: 'delete',
-      question: "Delete endpoint in existing endpoint list"
-    }
-  ]
+  let questionArray = commandList
 
   const renderQuestion = () => {
     questionArray.map((el, i) => {
@@ -75,10 +49,14 @@ export default () => {
   })
 
   renderQuestion()
-
+  
   readline.on("line", (line) => {
-    console.clear();
-    CliCommand.command(questionArray[selected].key)
+    console.clear()
+    charm.destroy()
+    if(questionArray[selected]){
+      CliCommand.command(questionArray[selected].key)
+    }
+    selected = 100000
   }).on("close", () => {
     readline.close();
     process.exit(0)
