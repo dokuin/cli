@@ -1,35 +1,9 @@
 import axios from 'axios';
 import build from 'build-url';
 
-interface RunInputs {
-  name: string;
-  description: string;
-  baseURL: string;
-  author: string;
-  endpoints: {
-    method: any;
-    path: string;
-    query: any;
-    headers?: object;
-    body?: object;
-    response?: {
-      description?: string;
-      status: number;
-      statusText: string;
-      headers: object;
-      body?: object;
-    };
-    errorResponse?: {
-      description?: string;
-      status: number;
-      statusText: string;
-      headers: object;
-      body?: object;
-    }[];
-  }[];
-}
+/// <reference types="dokuinjs" />
 
-export default async function Run(inputConfig: RunInputs) {
+export default async function Run(inputConfig: dokuinjs.RunInputs) {
   const { name, description, baseURL, author, endpoints } = inputConfig;
 
   for (const endpoint of endpoints) {
@@ -62,14 +36,7 @@ export default async function Run(inputConfig: RunInputs) {
   return { name, description, baseURL, author, endpoints };
 }
 
-interface ShootInputs {
-  url: string;
-  method: any;
-  headers?: object;
-  body?: object;
-}
-
-export async function shootAPI(shootData: ShootInputs) {
+export async function shootAPI(shootData: dokuinjs.ShootInputs) {
   const { url, method = 'GET', headers, body } = shootData;
   return await axios({
     url,
