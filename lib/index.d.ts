@@ -1,4 +1,4 @@
-declare namespace dokuinjs {
+export declare namespace dokuinjs {
   export interface RunInputs {
     name: string;
     description: string;

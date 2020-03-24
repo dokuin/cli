@@ -7,8 +7,8 @@
     "build": "tsc",
     "build:watch": "tsc -w"
   },
-  "main": "lib",
-  "types": "index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "bin": {
     "dokuin": "bin"
   },
