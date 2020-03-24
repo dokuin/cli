@@ -2,10 +2,12 @@
   "name": "dokuinjs",
   "version": "1.2.2",
   "description": "The only documentation generator at ease!",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "build:watch": "tsc -w"
   },
+  "main": "main/index.js",
   "bin": {
     "dokuin": "bin/index.js"
   },
@@ -37,5 +39,8 @@
     "inquirer": "^7.1.0",
     "json2md": "^1.7.0",
     "ora": "^4.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
   }
 }
