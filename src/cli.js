@@ -2,7 +2,7 @@ import cli from './';
 
 export default class CliCommand {
   static command(command = false){
-
+    // console.log(command)
     switch (command) {
       case 'start':
         cli.start();
@@ -34,6 +34,10 @@ export default class CliCommand {
         
       case 'add':
         cli.add();
+        break;
+
+      case 'update':
+        cli.update();
         break;
     
       default:

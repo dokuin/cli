@@ -1,15 +1,15 @@
 import fs from 'fs';
 import chalk from 'chalk';
-import cliStart from './start';
 import cliInit from './init';
 import cliRun from './run';
 import cliConvert from './convert';
 import cliGenerate from './endpoints';
-import { DeleteEndpoint } from './mutation';
+import { start } from './start';
+import { DeleteEndpoint, UpdateEndpoint } from './mutation';
 
 export default class Cli {
   static start(){
-    return cliStart()
+    return start()
   }
 
   static init() {
@@ -63,9 +63,11 @@ export default class Cli {
     }
   }
 
+  static update(){
+    return UpdateEndpoint()
+  }
+
   static delete(){
     return DeleteEndpoint()
   }
-
-
 }
