@@ -43,6 +43,10 @@ export default class CliCommand {
       case "--version":
         cli.version()
         break;
+
+      case "-v":
+        cli.version()
+        break;
     
       default:
         cli.start()
