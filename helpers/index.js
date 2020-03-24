@@ -35,7 +35,13 @@ function checkEligible() {
   return true;
 }
 
+function checkVersion(){
+  const data = fs.readFileSync('package.json', 'utf-8');
+  return data.version
+}
+
 module.exports = {
   checkFileExistsSync,
-  checkEligible
+  checkEligible,
+  checkVersion
 };
