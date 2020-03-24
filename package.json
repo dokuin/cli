@@ -7,10 +7,10 @@
     "build": "tsc",
     "build:watch": "tsc -w"
   },
-  "main": "lib/index.js",
+  "main": "lib",
   "types": "index.d.ts",
   "bin": {
-    "dokuin": "bin/index.js"
+    "dokuin": "bin"
   },
   "repository": {
     "type": "git",
