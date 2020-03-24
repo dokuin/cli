@@ -39,6 +39,14 @@ export default class CliCommand {
       case 'update':
         cli.update();
         break;
+
+      case "--version":
+        cli.version()
+        break;
+
+      case "-v":
+        cli.version()
+        break;
     
       default:
         cli.start()

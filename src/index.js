@@ -9,13 +9,16 @@ import cliConvert from './convert';
 import cliGenerate from './endpoints';
 import { start } from './start';
 import { DeleteEndpoint, UpdateEndpoint } from './mutation';
-import { DeleteEndpoint } from './mutation';
-import { checkEligible } from '../helpers';
+import { checkEligible, checkVersion } from '../helpers';
 import readline from './readline';
 
 export default class Cli {
   static start(){
     return start()
+  }
+
+  static version(){
+    console.log(checkVersion())
   }
 
   static init() {
