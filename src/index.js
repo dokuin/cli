@@ -3,18 +3,19 @@ import fs from 'fs';
 import chalk from 'chalk';
 
 // COMMAND FUNCTIONS
-import cliStart from './start';
 import cliInit from './init';
 import cliRun from './run';
 import cliConvert from './convert';
 import cliGenerate from './endpoints';
+import { start } from './start';
+import { DeleteEndpoint, UpdateEndpoint } from './mutation';
 import { DeleteEndpoint } from './mutation';
 import { checkEligible } from '../helpers';
 import readline from './readline';
 
 export default class Cli {
   static start(){
-    return cliStart()
+    return start()
   }
 
   static init() {
@@ -66,6 +67,10 @@ export default class Cli {
     if(autoclose){
       process.exit(0)
     }
+  }
+
+  static update(){
+    return UpdateEndpoint()
   }
 
   static delete(){

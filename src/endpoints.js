@@ -6,85 +6,12 @@ const chalk = require('chalk');
 const boxen = require('boxen')
 const warning = chalk.keyword('orange')
 const ora = require('ora');
+const { questionArray } = require('./endpointQuestion');
 
 export default (add = false) => {
   const message = add ? 'Fill these to add new endpoint' : 'Fill these to create endpoints'
   console.log(chalk.bold.cyan(boxen('Dokuin endpoints configuration: ', { padding: 1 })))
-  
   console.log(warning(message + '\n'))
-
-  const questionArray = [
-    {
-      name: 'method',
-      question: 'HTTP Method: '
-    },
-    {
-      name: 'path',
-      question: 'Path: '
-    },
-    {
-      name: 'description',
-      question: 'Endpoint description: '
-    },
-    {
-      name: 'headers',
-      question: 'Add Headers ? (yes or no) ',
-      nestedQuestion: [
-        {
-          name: 'key',
-          question: 'Key: ',
-        },
-        {
-          name: 'value',
-          question: 'Value: ',
-        },
-        {
-          name: 'next',
-          question: 'Add more headers ? (yes or no) '
-        }
-      ]
-    },
-    {
-      name: 'query',
-      question: 'Add Query Params ? (yes or no) ',
-      nestedQuestion: [
-        {
-          name: 'key',
-          question: 'Key: ',
-        },
-        {
-          name: 'value',
-          question: 'Value: ',
-        },
-        {
-          name: 'next',
-          question: 'Add more query params ? (yes or no) '
-        }
-      ]
-    },
-    {
-      name: 'body',
-      question: 'Add Request Body ? (yes or no) ',
-      nestedQuestion: [
-        {
-          name: 'key',
-          question: 'Key: ',
-        },
-        {
-          name: 'value',
-          question: 'Value: ',
-        },
-        {
-          name: 'next',
-          question: 'Add more request body ? (yes or no) '
-        }
-      ]
-    },
-    {
-      name: 'next',
-      question: 'Add more endpoints ? (yes or no) '
-    }
-  ]
   
   const listEndpoint = cli.rawList()
   endpoints.init = () => {
