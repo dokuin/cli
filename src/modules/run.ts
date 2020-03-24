@@ -1,11 +1,11 @@
 import axios from 'axios';
 import build from 'build-url';
-import { RunInputs, ShootInputs } from '..';
 
-/// <reference path="../index.d.ts" />
+// Definition Types
+import { DocumentationData, ShootInputs } from '.';
 
-export default async function Run(inputConfig: RunInputs) {
-  const { name, description, baseURL, author, endpoints } = inputConfig;
+export async function RunEndpoints(documentationData: DocumentationData) : Promise<DocumentationData> {
+  const { name, description, baseURL, author, endpoints } = documentationData;
 
   for (const endpoint of endpoints) {
     const builtURL = build(baseURL, {
@@ -13,7 +13,7 @@ export default async function Run(inputConfig: RunInputs) {
       queryParams: typeof endpoint.query !== 'undefined' ? endpoint.query : {}
     });
     try {
-      const response = await shootAPI({ url: builtURL, ...endpoint });
+      const response = await ShootAPI({ url: builtURL, ...endpoint });
       const { status, statusText, headers, data } = response;
       const finalResponse = {
         status,
@@ -27,6 +27,7 @@ export default async function Run(inputConfig: RunInputs) {
       const finalErrResponse = {
         status,
         statusText,
+        description,
         headers,
         body: data
       };
@@ -37,7 +38,7 @@ export default async function Run(inputConfig: RunInputs) {
   return { name, description, baseURL, author, endpoints };
 }
 
-export async function shootAPI(shootData: ShootInputs) {
+export async function ShootAPI(shootData: ShootInputs) : Promise<ShootInputs> {
   const { url, method = 'GET', headers, body } = shootData;
   return await axios({
     url,
