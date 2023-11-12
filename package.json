@@ -43,6 +43,6 @@
     "ora": "^6.1.2"
   },
   "devDependencies": {
-    "typescript": "^4.7.4"
+    "typescript": "^5.0.0"
   }
 }
