@@ -28,7 +28,7 @@
   "homepage": "https://github.com/dokuin/dokuinjs#readme",
   "dependencies": {
     "@types/json2md": "^1.5.1",
-    "axios": "^0.27.2",
+    "axios": "^1.6.0",
     "boxen": "^7.0.0",
     "build-url": "^6.0.1",
     "chalk": "^5.0.1",
