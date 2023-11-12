@@ -10,9 +10,9 @@
     call-bind "^1.0.2"
 
 "@types/json2md@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@types/json2md/-/json2md-1.5.1.tgz#2eba6ececf43252950d286eeae77612024392ad3"
-  integrity sha512-nl3qRDdBUtGeHEhwSeYMtXw5i6UXspS6pxaahmcrE4Fxt0UAvKvsJzu6UMtJ85+yTYiB9nA0TB1kFMEVkYDgUg==
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/@types/json2md/-/json2md-1.5.4.tgz#c418a77e40155451f4a3994bb5e4a1b93972e8d0"
+  integrity sha512-OFTAYD7Nnyu7FZPGnDwYbGOTKqzDfX71uFSgTbGhcr0aHCi17QkSOY3wO5H4yv5h23Ly+7suvf2lzHcdeDIH2Q==
 
 ansi-align@^3.0.1:
   version "3.0.1"
@@ -453,9 +453,9 @@ is-unicode-supported@^1.2.0:
   integrity sha512-43r2mRvz+8JRIKnWJ+3j8JtjRKZ6GmjzfaE/qiBJnikNnYv/6bagRJ1kUhNk8R5EX/GkobD+r+sfxCPJsiKBLQ==
 
 json2md@^1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/json2md/-/json2md-1.12.0.tgz#3ac0a2f8f5af140d6f29d91ab1107ca696305165"
-  integrity sha512-bpJpuqECzkndCa10aGPxeJNikmkDN7PAGXHvrBGTI4uey6QbTL5p0rkhk9lB3lKU4J7yGvkSmVBt8VhzUGu/fA==
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/json2md/-/json2md-1.13.0.tgz#aad7eabf6715cde30d40269d78f548b8ddac78e5"
+  integrity sha512-AhMhiz0fE1nmAzqJ042zt/d2wtTmd8cWZyTvBidfOQJvPRu5HPVQxC1lCehW26+XiDTQQ4H904FIRP4PAUHXHg==
   dependencies:
     indento "^1.1.13"
 
