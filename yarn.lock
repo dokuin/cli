@@ -442,9 +442,9 @@ is-unicode-supported@^2.0.0:
   integrity sha512-FRdAyx5lusK1iHG0TWpVtk9+1i+GjrzRffhDg4ovQ7mcidMQ6mj+MhKPmvh7Xwyv5gIS06ns49CA7Sqg7lC22Q==
 
 json2md@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/json2md/-/json2md-2.0.0.tgz#9ea4404183b836c39dfa886b4bbf25c8186694eb"
-  integrity sha512-4PIMtD0zTfQZWcUId1EyHY2BQ2EG/imHWHkGFbXYPlczW8G6wPJA/BRVN3e5v6NPwFUCcoFvUsCeo6rzV2CWww==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/json2md/-/json2md-2.0.1.tgz#994853e6e0a1a21a1a5a6e5437e5433273c3b8ed"
+  integrity sha512-VbwmZ83qmUfKBS2pUOHlzNKEZFPBeJSbzEok3trMYyboZUgdHNn1XZfc1uT8UZs1GHCrmRUBXCfqw4YmmQuOhw==
   dependencies:
     indento "^1.1.13"
 
