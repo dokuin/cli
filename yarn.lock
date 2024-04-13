@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@inquirer/figures@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@inquirer/figures/-/figures-1.0.0.tgz#f28ee68d08c5ada5284ee0d58ae1d177e80dabda"
+  integrity sha512-3fw+7+77/duTnMJTeSS44wneszghI4tkr0m0xdIJabbYRe36ElzmsqyboMZ1nFRon6sT+ckVvYDVjwapKv+2sw==
+
 "@ljharb/through@^2.3.13":
   version "2.3.13"
   resolved "https://registry.yarnpkg.com/@ljharb/through/-/through-2.3.13.tgz#b7e4766e0b65aa82e529be945ab078de79874edc"
@@ -275,11 +280,6 @@ es-errors@^1.3.0:
   resolved "https://registry.yarnpkg.com/es-errors/-/es-errors-1.3.0.tgz#05f75a25dab98e4fb1dcd5e1472c0546d5057c8f"
   integrity sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==
 
-escape-string-regexp@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
-  integrity sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==
-
 esm@^3.2.25:
   version "3.2.25"
   resolved "https://registry.yarnpkg.com/esm/-/esm-3.2.25.tgz#342c18c29d56157688ba5ce31f8431fbb795cc10"
@@ -298,13 +298,6 @@ figlet@^1.5.2:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/figlet/-/figlet-1.7.0.tgz#46903a04603fd19c3e380358418bb2703587a72e"
   integrity sha512-gO8l3wvqo0V7wEFLXPbkX83b7MVjRrk1oRLfYlZXol8nEpb/ON9pcKLI4qpBv5YtOTfrINtqb7b40iYY2FTWFg==
-
-figures@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/figures/-/figures-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
-  integrity sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==
-  dependencies:
-    escape-string-regexp "^1.0.5"
 
 follow-redirects@^1.15.6:
   version "1.15.6"
@@ -400,17 +393,17 @@ inherits@^2.0.1, inherits@^2.0.3, inherits@^2.0.4:
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
 inquirer@^9.0.2:
-  version "9.2.17"
-  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-9.2.17.tgz#87783875f2983cf8f64c30acb9c59cf044c71bc6"
-  integrity sha512-Vr3Ia2ud5sGnioURkE69endl4SkeJcMzTF6SosKcX5GALJfId7C+JvO5ZZb6y1LOXnEofCPbwzoQ1q0e8Gaduw==
+  version "9.2.18"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-9.2.18.tgz#eb7dcb2c9d7aa0678b9dc4d1d243c297aacc2629"
+  integrity sha512-Qzm+UP7L9beFyycZ9Nxzqj7WBgeJIaT4Ue0+2bmQp9yZXiUW2azrmBnp3vlInMw1wXkUmaM0hiMcht7CjJzASw==
   dependencies:
+    "@inquirer/figures" "^1.0.0"
     "@ljharb/through" "^2.3.13"
     ansi-escapes "^4.3.2"
     chalk "^5.3.0"
     cli-cursor "^3.1.0"
     cli-width "^4.1.0"
     external-editor "^3.1.0"
-    figures "^3.2.0"
     lodash "^4.17.21"
     mute-stream "1.0.0"
     ora "^5.4.1"
