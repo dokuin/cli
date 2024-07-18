@@ -29,7 +29,7 @@
   "dependencies": {
     "@types/json2md": "^1.5.1",
     "axios": "^1.6.0",
-    "boxen": "^7.0.0",
+    "boxen": "^8.0.0",
     "build-url": "^6.0.1",
     "chalk": "^5.0.1",
     "charm": "^1.0.2",
