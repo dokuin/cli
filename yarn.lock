@@ -88,10 +88,10 @@
     "@inquirer/type" "^1.5.1"
     ansi-escapes "^4.3.2"
 
-"@inquirer/prompts@^5.3.3":
-  version "5.3.3"
-  resolved "https://registry.yarnpkg.com/@inquirer/prompts/-/prompts-5.3.3.tgz#d34407da7f7b75c6c848d7e7c11f91a2899e69e9"
-  integrity sha512-bVBVevH/1fMY4IZoIryR4/xrazNKryrvoKnzN8qRU4mMYeYzZH8ZpGcq//4VVVxktbUnFaxSRLKy2q7SRbOxQA==
+"@inquirer/prompts@^5.3.4":
+  version "5.3.4"
+  resolved "https://registry.yarnpkg.com/@inquirer/prompts/-/prompts-5.3.4.tgz#6abc45de44340306249ac17191a404a543081633"
+  integrity sha512-rZQewXIV6yZXuZtZ65/WIhcND0RCOQZtu0uPEST7wZStLQwuZCD3rZrD1fuxygqzqA5rGq7pgSuLmhGCuSnkkA==
   dependencies:
     "@inquirer/checkbox" "^2.4.3"
     "@inquirer/confirm" "^3.1.18"
@@ -100,14 +100,14 @@
     "@inquirer/input" "^2.2.5"
     "@inquirer/number" "^1.0.6"
     "@inquirer/password" "^2.1.18"
-    "@inquirer/rawlist" "^2.1.18"
+    "@inquirer/rawlist" "^2.2.0"
     "@inquirer/search" "^1.0.3"
     "@inquirer/select" "^2.4.3"
 
-"@inquirer/rawlist@^2.1.18":
-  version "2.1.18"
-  resolved "https://registry.yarnpkg.com/@inquirer/rawlist/-/rawlist-2.1.18.tgz#b72ad16e5bb06ceecd31089c494473598f0ba0f8"
-  integrity sha512-g0I4FYO/XaOvBSzTigFstW2RhHoy0KWPXykiuNM4Nvob/WBTNtP16Ix7ObOJFy/67ezE5gsdM8ZARPYvkyHSHA==
+"@inquirer/rawlist@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@inquirer/rawlist/-/rawlist-2.2.0.tgz#c3818ad6666a3a5d0446fb9f9c1dc35ee4218c32"
+  integrity sha512-Lhsm7myhiV9WJzpmEoTHP4mIXXAWxcEeu19S6RVghC1WpkQE5pvsE3W1KBr+ouuFSW7dylZLMRe8vQdizDplTA==
   dependencies:
     "@inquirer/core" "^9.0.6"
     "@inquirer/type" "^1.5.1"
@@ -398,11 +398,11 @@ inherits@^2.0.1:
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
 inquirer@^10.0.0:
-  version "10.1.3"
-  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-10.1.3.tgz#a0ef70a86d1d05c51e0bb1f56252e38d080e1ebe"
-  integrity sha512-D/0kZYOPVpy7h4LOEO1nNqjGjsjRSwqRPYCmJGWE4KEERbJKJNMEtbLgDS/p8W7/tu9cfglibRCKQ5ybSzdg+w==
+  version "10.1.4"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-10.1.4.tgz#8f3c3566826504a3b6607adbf85f80b29150c83e"
+  integrity sha512-4EOIuSov4bfQjbT+lQKGIPWxTfZO0hFIo2/vS/J92NsCp1XPm9VjeXQ0f2GEeP0XTKpm1ts0Iyk1LDQHmzdDuA==
   dependencies:
-    "@inquirer/prompts" "^5.3.3"
+    "@inquirer/prompts" "^5.3.4"
     "@inquirer/type" "^1.5.1"
     "@types/mute-stream" "^0.0.4"
     ansi-escapes "^4.3.2"
