@@ -355,9 +355,9 @@ iconv-lite@^0.4.24:
     safer-buffer ">= 2.1.2 < 3"
 
 indento@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/indento/-/indento-1.1.13.tgz#751331b327c04740eeb7be40c5606e6e255c9e36"
-  integrity sha512-YZWk3mreBEM7sBPddsiQnW9Z8SGg/gNpFfscJq00HCDS7pxcQWWWMSVKJU7YkTRyDu1Zv2s8zaK8gQWKmCXHlg==
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/indento/-/indento-1.1.14.tgz#95cb2c91850ddf472d5604ae245712261e301b48"
+  integrity sha512-K4cK97v4M/ucCAbe3LUpg994folYL0WnEiCFxHXAIowKLbBb/Ahiazkz3Ao5gRar4i9pDr3imcpq4suOu0FbNw==
 
 inherits@^2.0.1:
   version "2.0.4"
@@ -398,9 +398,9 @@ is-unicode-supported@^2.0.0:
   integrity sha512-mE00Gnza5EEB3Ds0HfMyllZzbBrmLOX3vfWoj9A9PEnTfratQ/BcaJOuMhnkhjXvb2+FkY3VuHqtAGpTPmglFQ==
 
 json2md@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/json2md/-/json2md-2.0.1.tgz#994853e6e0a1a21a1a5a6e5437e5433273c3b8ed"
-  integrity sha512-VbwmZ83qmUfKBS2pUOHlzNKEZFPBeJSbzEok3trMYyboZUgdHNn1XZfc1uT8UZs1GHCrmRUBXCfqw4YmmQuOhw==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/json2md/-/json2md-2.0.2.tgz#3fe9b269644db6597ab1f601b881d4ba9cd0aa90"
+  integrity sha512-bPXMyPSZRsN2Xh5tNWA4RjREnYmDK2GFO8eYOTbHSfVPfrFaqzIqFWN3gdf1bya65cm9Mf2PBSwvM7sWGEeuVA==
   dependencies:
     indento "^1.1.13"
 
