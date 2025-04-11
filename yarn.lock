@@ -496,9 +496,9 @@ is-unicode-supported@^2.0.0:
   integrity sha512-mE00Gnza5EEB3Ds0HfMyllZzbBrmLOX3vfWoj9A9PEnTfratQ/BcaJOuMhnkhjXvb2+FkY3VuHqtAGpTPmglFQ==
 
 json2md@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/json2md/-/json2md-2.0.2.tgz#3fe9b269644db6597ab1f601b881d4ba9cd0aa90"
-  integrity sha512-bPXMyPSZRsN2Xh5tNWA4RjREnYmDK2GFO8eYOTbHSfVPfrFaqzIqFWN3gdf1bya65cm9Mf2PBSwvM7sWGEeuVA==
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/json2md/-/json2md-2.0.3.tgz#f03eecb9a6e19de9c63a4744bab9cccf7b416cec"
+  integrity sha512-ZPzh6Djvqz8grJMxKllfCHo0p+p7BsbZ1J95KcCJgvvfdoy7myuKrrkUp80Kpy+wGauykC0dYljLqLY0kENaOw==
   dependencies:
     indento "^1.1.13"
 
