@@ -408,9 +408,9 @@ external-editor@^3.1.0:
     tmp "^0.0.33"
 
 figlet@^1.5.2:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/figlet/-/figlet-1.8.1.tgz#e8e8a07e8c16be24c31086d7d5de8a9b9cf7f0fd"
-  integrity sha512-kEC3Sme+YvA8Hkibv0NR1oClGcWia0VB2fC1SlMy027cwe795Xx40Xiv/nw/iFAwQLupymWh+uhAAErn/7hwPg==
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/figlet/-/figlet-1.8.2.tgz#26f7d710a3bcff735a1afe5c6042c5361e1f2a55"
+  integrity sha512-iPCpE9B/rOcjewIzDnagP9F2eySzGeHReX8WlrZQJkqFBk2wvq8gY0c6U6Hd2y9HnX1LQcYSeP7aEHoPt6sVKQ==
 
 follow-redirects@^1.15.6:
   version "1.15.9"
