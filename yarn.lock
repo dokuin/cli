@@ -372,9 +372,9 @@ esm@^3.2.25:
   integrity sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA==
 
 figlet@^1.5.2:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/figlet/-/figlet-1.9.0.tgz#0c51491e716547cb635a42dbd1e47c7a78351d34"
-  integrity sha512-S+WN3ZIGYgiZUlQD0s3qlAPSOdCdYth0G7PK6DbubfixgorA7jzNl4eae2Hc/rEjQ5UYnf0YkcpCFc/IMklZhg==
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/figlet/-/figlet-1.9.1.tgz#2760642afc600199065c229d1e7ced7bb39c7107"
+  integrity sha512-DpKC89iXFjq6NCaIQ1O91R+ofpfyvkwuBfoVd8LpP/JZGZQpelMXgiTStGOfksuMYaDoBAwFlvx7mk+wX+3rrA==
   dependencies:
     commander "^14.0.0"
 
