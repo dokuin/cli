@@ -479,9 +479,9 @@ fast-wrap-ansi@^0.2.0:
     fast-string-width "^3.0.2"
 
 figlet@^1.5.2:
-  version "1.11.3"
-  resolved "https://registry.yarnpkg.com/figlet/-/figlet-1.11.3.tgz#9feb8895c373646491e89e5ef99d4097859c465b"
-  integrity sha512-7+OS4S6VjQXI2XRvfZlOdHhItd25lI0NgrR1j5UHfuyZfmMh44v65tMQUlb2bSriYGPCHAtGhuY5u23vqelvmg==
+  version "1.11.4"
+  resolved "https://registry.yarnpkg.com/figlet/-/figlet-1.11.4.tgz#4222f6f23203e3827ab5176a0130b4f61d0587fd"
+  integrity sha512-ZU41480OncL+NVLQrT0GVnbO0COL24sLSrzksioDgunmdJNYEUxhJJZ4Y3x1csN8XXqN5OcCZTLG8lKdquNyfQ==
   dependencies:
     commander "^14.0.0"
 
